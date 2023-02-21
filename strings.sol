@@ -16,15 +16,15 @@ Instead convert it with stringToBytes method and then return it
 
 Excercise with strings:
 1, Create a string called favoriteColor
-2. Set the favorite color to blue
+2. Set the favorite color to your favorite color
 3. Create a function which returns the string literal of favoriteColor
-4. Create a function which changes the favoriteColor string literal from blue to your favorite color
+4. Create a function which changes the favoriteColor string literal from to another of your favorite color
 5. Create a function which can return how many characters there are in the string favoriteColor 
 */
 
 contract learnStrings {
     string greetings = "Hello World";
-    string favoriteColor = "Blue";
+    string favoriteColor = "Red";
 
     function sayHelloWorld() public view returns(string memory) {
         return greetings;

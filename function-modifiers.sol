@@ -13,7 +13,7 @@ Function Modifiers Excersise Practice
 contract Owner {
     address owner;
 
-    constructor() public {
+    constructor() {
         owner = msg.sender;
     }
     
@@ -32,7 +32,7 @@ contract Register is Owner {
     mapping(address => bool) registeredAddresses;
     uint price;
 
-    constructor(uint initialPrice) public {
+    constructor(uint initialPrice) {
         price = initialPrice;
     }
 

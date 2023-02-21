@@ -11,13 +11,13 @@ Structs Excercise Practice:
 2. Return the id of the new movie 
 */
 
-contract learnStructs {
-    struct Movie {
+struct Movie {
         string title;
         string director;
         uint movieId;
     }
 
+contract learnStructs {
     Movie movie;
 
     function setMovie() public {
@@ -30,12 +30,6 @@ contract learnStructs {
 }
 
 contract structsExcercisePractice {
-    struct Movie {
-        string title;
-        string director;
-        uint movieId;
-    }
-
     Movie movie;
 
     function setMovie() public {
@@ -43,6 +37,28 @@ contract structsExcercisePractice {
     }
 
     function getMovieName() public view returns(string memory) {
+        return movie.title;
+    }
+
+    function getMovieDirector() public view returns(string memory) {
+        return movie.director;
+    }
+
+    function getMovieId() public view returns(uint) {
+        return movie.movieId;
+    }
+}
+
+contract structsWithConstructor {
+    Movie movie;
+
+    constructor(string memory _title, string memory _director, uint _movieId) {
+        movie.title = _title;
+        movie.director = _director;
+        movie.movieId = _movieId;
+    } 
+
+    function getMovieTitle() public view returns(string memory) {
         return movie.title;
     }
 

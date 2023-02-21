@@ -13,7 +13,7 @@ An array is sued to store a collection of data but it is often more useful to th
 Array Excercise:
 1. Create an empty array called changeArray 
 2. Create a function called removeElement which sets the index argument of the array to the last elemetn in the array
-3. Remove the last index from that function witht eh pop method
+3. Remove the last index from that function with the pop method
 4. Create a function called test which pushed 1, 2, 3, 4 into changeArray
 5. Remove the element 2 from the array when the contract is called 
 */
@@ -25,7 +25,6 @@ contract learnArrays {
     uint [] public changeArray;
 
     // The push() method adds one or more elements to the end of an array and returns the new length of the array
-
     function push(uint number) public {
         myArray1.push(number);
     }
@@ -47,6 +46,14 @@ contract learnArrays {
     function remove(uint i) public {
         delete myArray1[i];
     } 
+
+    function getElement(uint i) public view returns(uint) {
+        if(i < myArray1.length) {
+            return myArray1[i];
+        }
+
+        return 0;
+    }
 
     function removeElement(uint i) public {
         changeArray[i] = changeArray[changeArray.length -1];
